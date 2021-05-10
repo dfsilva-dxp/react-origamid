@@ -1,8 +1,17 @@
+import { ThemeProvider } from "styled-components";
+import { LayoutComponent } from "./components/LayoutComponent";
+import { Transactions } from "./pages/Transactions";
+import { GlobalStyle } from "./styles/global";
+import dark from "./styles/themes/dark";
+
 function App() {
   return (
-    <div className="container">
-      <h1>APP</h1>
-    </div>
+    <ThemeProvider theme={dark}>
+      <LayoutComponent>
+        <Transactions />
+      </LayoutComponent>
+      <GlobalStyle />
+    </ThemeProvider>
   );
 }
 
