@@ -1,0 +1,42 @@
+import styled from "styled-components";
+
+export const Navbar = styled.header`
+  background: ${({ theme }) => theme.colors.shape};
+  grid-area: header;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .wrap {
+    display: flex;
+    align-items: center;
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-left: 2.5rem;
+
+      .avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+        background: ${({ theme }) => theme.colors.shape};
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        border: 2px solid ${({ theme }) => theme.colors.green};
+        color: ${({ theme }) => theme.colors.green};
+      }
+
+      p {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  @media (min-width: 576px) {
+    padding: 0 4.5rem;
+  }
+`;
