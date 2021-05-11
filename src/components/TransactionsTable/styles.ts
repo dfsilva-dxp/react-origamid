@@ -13,8 +13,8 @@ export const Container = styled.section`
     }
     tbody tr {
       position: relative;
-
-      &.any::after,
+      box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+      &.eventual::after,
       &.recurrent::after {
         content: "";
         position: absolute;
@@ -24,7 +24,7 @@ export const Container = styled.section`
         bottom: 0;
         border-radius: 0.25rem 0 0 0.25rem;
       }
-      &.any::after {
+      &.eventual::after {
         background: ${({ theme }) => theme.colors.red};
       }
       &.recurrent::after {
@@ -41,8 +41,9 @@ export const Container = styled.section`
           font-weight: 600;
         }
         &:last-child {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
           max-width: 30px;
+          padding: 0.675rem 2.5rem;
           svg {
             cursor: pointer;
             &:hover {
@@ -56,6 +57,58 @@ export const Container = styled.section`
         &.withdraw {
           color: ${({ theme }) => theme.colors.red};
         }
+      }
+    }
+  }
+`;
+
+export const NavFilterTransaction = styled.nav`
+  margin: auto;
+  width: 18.75rem;
+  padding: 0.675rem 0;
+  ul {
+    border: solid 3px #2b3c4e;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      cursor: pointer;
+      li {
+        position: relative;
+        display: inline-block;
+        width: 5.625rem;
+        height: 3.75rem;
+        text-align: center;
+        line-height: 3.75rem;
+        transition: 0.3s;
+        &::before {
+          position: relative;
+          display: block;
+          width: 5.625rem;
+          height: 3.75rem;
+          content: "";
+          transform: scaleY(1.2);
+          z-index: -1;
+          margin-bottom: -3.75rem;
+          transition: 0.3s;
+        }
+        &:hover {
+          background-color: rgba(107, 185, 240, 0.2);
+        }
+      }
+    }
+  }
+  input {
+    display: none;
+    &[type="radio"]:checked + label > li {
+      color: ${({ theme }) => theme.colors.text};
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+      &::before {
+        background: ${({ theme }) => theme.colors.blue};
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
       }
     }
   }
