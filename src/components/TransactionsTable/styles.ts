@@ -68,7 +68,7 @@ export const NavFilterTransaction = styled.nav`
   padding: 0.675rem 0;
   ul {
     border: solid 3px #2b3c4e;
-    height: 3.75rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -78,19 +78,20 @@ export const NavFilterTransaction = styled.nav`
         position: relative;
         display: inline-block;
         width: 5.625rem;
-        height: 3.75rem;
+        height: 2.5rem;
+        font-size: 0.875rem;
         text-align: center;
-        line-height: 3.75rem;
+        line-height: 2.5rem;
         transition: 0.3s;
         &::before {
           position: relative;
           display: block;
           width: 5.625rem;
-          height: 3.75rem;
+          height: 2.5rem;
           content: "";
           transform: scaleY(1.2);
           z-index: -1;
-          margin-bottom: -3.75rem;
+          margin-bottom: -2.5rem;
           transition: 0.3s;
         }
         &:hover {
@@ -102,10 +103,10 @@ export const NavFilterTransaction = styled.nav`
   input {
     display: none;
     &[type="radio"]:checked + label > li {
-      color: ${({ theme }) => theme.colors.text};
       font-weight: 600;
       color: #fff;
       text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+
       &::before {
         background: ${({ theme }) => theme.colors.blue};
         box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);

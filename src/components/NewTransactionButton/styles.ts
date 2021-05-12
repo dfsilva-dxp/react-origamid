@@ -4,7 +4,7 @@ export const Button = styled.button`
   padding: 0.5rem 2.5rem;
   border: none;
   border-radius: 50px;
-  background: ${({ theme }) => theme.colors.green};
+  background: ${({ theme }) => theme.colors.blue};
   color: ${({ theme }) => theme.colors.text};
 
   display: flex;

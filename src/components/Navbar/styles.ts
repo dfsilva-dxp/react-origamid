@@ -26,12 +26,13 @@ export const Navbar = styled.header`
         align-items: center;
         justify-content: center;
         font-size: 1.75rem;
-        border: 2px solid ${({ theme }) => theme.colors.green};
-        color: ${({ theme }) => theme.colors.green};
+        border: 2px solid ${({ theme }) => theme.colors.text};
+        color: ${({ theme }) => theme.colors.text};
       }
 
       p {
-        margin-left: 1rem;
+        margin-left: 0.625rem;
+        font-weight: 600;
       }
     }
   }
