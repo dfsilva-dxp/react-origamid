@@ -1,8 +1,9 @@
 import { BrowserRouter } from "react-router-dom";
+import { SignIn } from "../pages/SignIn";
 import { AppRoutes } from "./routes";
 
 export function Routes() {
-  const hasUser = true;
+  const hasUser = false;
   return (
     <>
       {hasUser ? (
@@ -10,9 +11,7 @@ export function Routes() {
           <AppRoutes />
         </BrowserRouter>
       ) : (
-        <h1>
-          <strong>Login</strong>
-        </h1>
+        <SignIn />
       )}
     </>
   );
