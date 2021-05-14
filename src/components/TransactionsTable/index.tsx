@@ -1,4 +1,6 @@
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, useEffect } from "react";
+import { useParams } from "react-router";
+
 import { FilterControllers } from "../FilterControllers";
 import { TiTrash } from "react-icons/ti";
 
@@ -6,12 +8,20 @@ import * as S from "./styles";
 
 export function TransactionsTable() {
   const [radio, setRadioValue] = useState("any");
+  const [title, setTitle] = useState("");
+  const { type } = useParams();
+
+  useEffect(() => {
+    setTitle(type);
+  }, [type]);
+
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     setRadioValue(e.target.value);
   }
+
   return (
     <S.Container>
-      <FilterControllers title="Entradas" />
+      <FilterControllers title={title} />
       <S.NavFilterTransaction>
         <ul>
           <input
@@ -61,7 +71,7 @@ export function TransactionsTable() {
         <tbody>
           <tr className="recurrent">
             <td>IPVA</td>
-            <td className="deposit">R$2500,00</td>
+            <td className={type}>{type === "withdraw" && " - "}R$2500,00</td>
             <td>Carro</td>
             <td>22/10/2021</td>
             <td>
@@ -70,7 +80,7 @@ export function TransactionsTable() {
           </tr>
           <tr className="eventual">
             <td>IPVA</td>
-            <td className="deposit"> R$2500,00</td>
+            <td className={type}> {type === "withdraw" && " - "} R$2500,00</td>
             <td>Carro</td>
             <td>22/10/2021</td>
             <td>

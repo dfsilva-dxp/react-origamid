@@ -5,6 +5,10 @@ export const FilterControllerContent = styled.header`
   align-items: center;
   justify-content: space-between;
 
+  h1 {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+  }
   input[type="month"] {
     padding: 0.5rem 1rem;
     text-transform: capitalize;

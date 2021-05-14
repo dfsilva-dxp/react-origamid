@@ -16,6 +16,11 @@ export const Aside = styled.aside`
   nav {
     width: 100%;
     padding: 2.5rem 0;
+
+    ul li:last-child {
+      cursor: pointer;
+    }
+    ul li:last-child,
     ul li a {
       position: relative;
       height: 3.25rem;
@@ -33,6 +38,10 @@ export const Aside = styled.aside`
         background: ${({ theme }) => theme.colors.blue};
         right: 0;
         border-radius: 3px 0 0 3px;
+      }
+
+      & > svg {
+        outline: transparent;
       }
     }
   }

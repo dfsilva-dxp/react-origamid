@@ -1,10 +1,10 @@
-import { MdAttachMoney } from "react-icons/md";
 import {
   TiChartAreaOutline,
   TiArrowUpOutline,
   TiArrowDownOutline,
   TiPower,
 } from "react-icons/ti";
+import { NavLink } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
 
 import logo from "../../assets/balance.svg";
@@ -20,7 +20,7 @@ export function Aside() {
       <nav>
         <ul>
           <li>
-            <a className="active">
+            <NavLink to="dashboard">
               <TiChartAreaOutline data-tip data-for="dashboard" />
               <ReactTooltip
                 id="dashboard"
@@ -30,23 +30,10 @@ export function Aside() {
               >
                 Dashboard
               </ReactTooltip>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a>
-              <MdAttachMoney data-tip data-for="register" />
-              <ReactTooltip
-                id="register"
-                place="right"
-                type="dark"
-                effect="float"
-              >
-                Novo Regístro
-              </ReactTooltip>
-            </a>
-          </li>
-          <li>
-            <a>
+            <NavLink to="transaction/deposit">
               <TiArrowUpOutline data-tip data-for="deposit" />
               <ReactTooltip
                 id="deposit"
@@ -54,12 +41,12 @@ export function Aside() {
                 type="dark"
                 effect="float"
               >
-                Entradas
+                Deposit
               </ReactTooltip>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a>
+            <NavLink to="transaction/withdraw">
               <TiArrowDownOutline data-tip data-for="withdraw" />
               <ReactTooltip
                 id="withdraw"
@@ -67,22 +54,15 @@ export function Aside() {
                 type="dark"
                 effect="float"
               >
-                Saídas
+                Withdraw
               </ReactTooltip>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a>
-              <TiPower data-tip data-for="logout" />
-              <ReactTooltip
-                id="logout"
-                place="right"
-                type="dark"
-                effect="float"
-              >
-                Logout
-              </ReactTooltip>
-            </a>
+            <TiPower data-tip data-for="logout" />
+            <ReactTooltip id="logout" place="right" type="dark" effect="float">
+              Logout
+            </ReactTooltip>
           </li>
         </ul>
       </nav>
