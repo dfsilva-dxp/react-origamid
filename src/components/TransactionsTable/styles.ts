@@ -28,7 +28,7 @@ export const Container = styled.section`
         background: ${({ theme }) => theme.colors.red};
       }
       &.recurrent::after {
-        background: ${({ theme }) => theme.colors.blue};
+        background: ${({ theme }) => theme.colors.green};
       }
       td {
         background: ${({ theme }) => theme.colors.shape};
@@ -110,6 +110,16 @@ export const NavFilterTransaction = styled.nav`
       &::before {
         background: ${({ theme }) => theme.colors.blue};
         box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+      }
+    }
+    &.recurrent:checked + label > li {
+      &::before {
+        background: ${({ theme }) => theme.colors.green};
+      }
+    }
+    &.eventual:checked + label > li {
+      &::before {
+        background: ${({ theme }) => theme.colors.red};
       }
     }
   }

@@ -30,6 +30,7 @@ export function TransactionsTable() {
             name="condition"
             value="recurrent"
             id="recurrent"
+            className="recurrent"
             onChange={handleChange}
           />
           <label htmlFor="recurrent">
@@ -40,6 +41,7 @@ export function TransactionsTable() {
             name="condition"
             value="eventual"
             id="eventual"
+            className="eventual"
             onChange={handleChange}
           />
           <label htmlFor="eventual">
