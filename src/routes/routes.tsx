@@ -7,7 +7,7 @@ export function AppRoutes() {
   return (
     <LayoutComponent>
       <Routes>
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Dashboard />} />
         <Route path="transaction/:type" element={<Transactions />} />
       </Routes>
     </LayoutComponent>

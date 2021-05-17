@@ -4,12 +4,18 @@ import { ToggleTheme } from "../ToggleTheme";
 
 import * as S from "./styles";
 
-export function Navbar() {
+interface NavbarProps {
+  onOpenNewTransactionModal: () => void;
+}
+
+export function Navbar({ onOpenNewTransactionModal }: NavbarProps) {
   return (
     <S.Navbar>
       <ToggleTheme />
       <div className="wrap">
-        <NewTransactionButton />
+        <NewTransactionButton
+          onOpenNewTransactionModal={onOpenNewTransactionModal}
+        />
 
         <div className="profile">
           <div className="avatar">

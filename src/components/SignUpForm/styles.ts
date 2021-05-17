@@ -4,8 +4,9 @@ export const WrapForm = styled.div`
   width: 100%;
   height: auto;
   padding: 1rem;
-  background: #28292d;
+  background: ${({ theme }) => theme.colors.shape};
   border-radius: 8px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
 
   display: grid;
   grid-template-columns: 100%;

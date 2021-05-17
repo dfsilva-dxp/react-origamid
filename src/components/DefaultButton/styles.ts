@@ -8,8 +8,8 @@ export const Button = styled.button`
   border-radius: 0.25rem;
   font-size: 1rem;
   line-height: 3rem;
-  background: #3585f3;
-  color: #fff;
+  background: ${({ theme }) => theme.colors.blue};
+  color: ${({ theme }) => theme.colors.text};
   transition: filter 0.2s;
 
   &:hover {

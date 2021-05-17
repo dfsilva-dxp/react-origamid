@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Main = styled.main`
   width: 100%;
   height: 100vh;
-  background: #191a1c;
-  color: #fff;
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.text};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,15 +33,15 @@ export const Section = styled.section`
     text-align: center;
     color: #a8a8b3;
     span {
-      color: #fff;
+      color: ${({ theme }) => theme.colors.text};
       font-weight: 600;
-      text-decoration: underline #fff;
+      text-decoration: underline ${({ theme }) => theme.colors.text};
       cursor: pointer;
       transition: all 0.2s;
 
       &:hover {
-        color: #3585f3;
-        text-decoration: underline #3585f3;
+        color: ${({ theme }) => theme.colors.blue};
+        text-decoration: underline ${({ theme }) => theme.colors.blue};
       }
     }
   }

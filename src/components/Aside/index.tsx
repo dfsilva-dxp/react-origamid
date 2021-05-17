@@ -20,7 +20,7 @@ export function Aside() {
       <nav>
         <ul>
           <li>
-            <NavLink to="dashboard">
+            <NavLink to="/" end>
               <TiChartAreaOutline data-tip data-for="dashboard" />
               <ReactTooltip
                 id="dashboard"

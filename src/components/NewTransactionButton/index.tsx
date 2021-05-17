@@ -2,11 +2,19 @@ import { TiPlus } from "react-icons/ti";
 
 import * as S from "./styles";
 
-export function NewTransactionButton() {
+interface HeaderProps {
+  onOpenNewTransactionModal: () => void;
+}
+
+export function NewTransactionButton({
+  onOpenNewTransactionModal,
+}: HeaderProps) {
   return (
-    <S.Button>
-      <TiPlus />
-      <span>Nova Transação</span>
-    </S.Button>
+    <>
+      <S.Button onClick={onOpenNewTransactionModal}>
+        <TiPlus />
+        <span>Nova Transação</span>
+      </S.Button>
+    </>
   );
 }

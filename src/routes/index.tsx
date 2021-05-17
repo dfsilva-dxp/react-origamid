@@ -3,7 +3,7 @@ import { SignIn } from "../pages/SignIn";
 import { AppRoutes } from "./routes";
 
 export function Routes() {
-  const hasUser = false;
+  const hasUser = true;
   return (
     <>
       {hasUser ? (
