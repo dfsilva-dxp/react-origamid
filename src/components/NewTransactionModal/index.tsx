@@ -25,6 +25,7 @@ export function NewTransactionModal({
       onRequestClose={handleOnRequestClose}
       overlayClassName="react-modal-overlay"
       className="react-modal-content"
+      ariaHideApp={false}
     >
       <button
         type="button"
