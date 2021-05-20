@@ -18,6 +18,11 @@ export function NewTransactionModal({
   handleOnRequestClose,
 }: NewTransactionModalProps) {
   const [type, setType] = useState("deposit");
+  const [title, setTitle] = useState("");
+  const [date, setDate] = useState("");
+  const [frequency, setFrequency] = useState("");
+  const [category, setCategory] = useState("");
+  const [value, setValue] = useState(0);
 
   return (
     <Modal
@@ -36,19 +41,54 @@ export function NewTransactionModal({
       </button>
       <S.Form>
         <h2>New transaction</h2>
-        <Input type="text" placeholder="Title" />
+        <Input
+          type="text"
+          placeholder="Title"
+          handleChange={(e): void => {
+            setTitle(e.target.value);
+          }}
+          value={title}
+        />
         <S.FormGroup>
           <span>
-            <Input type="date" placeholder="Date" />
+            <Input
+              type="date"
+              placeholder="Date"
+              handleChange={(e): void => {
+                setDate(e.target.value);
+              }}
+              value={date}
+            />
           </span>
           <span>
-            <Input type="text" placeholder="Frequency" />
+            <Input
+              type="text"
+              placeholder="Frequency"
+              handleChange={(e): void => {
+                setFrequency(e.target.value);
+              }}
+              value={frequency}
+            />
           </span>
           <span>
-            <Input type="text" placeholder="Category" />
+            <Input
+              type="text"
+              placeholder="Category"
+              handleChange={(e): void => {
+                setCategory(e.target.value);
+              }}
+              value={category}
+            />
           </span>
           <span>
-            <Input type="number" placeholder="Value" />
+            <Input
+              type="number"
+              placeholder="Value"
+              handleChange={(e): void => {
+                setValue(Number(e.target.value));
+              }}
+              value={value}
+            />
           </span>
 
           <S.RadioBox
@@ -75,7 +115,7 @@ export function NewTransactionModal({
             <span>Withdraw</span>
           </S.RadioBox>
         </S.FormGroup>
-        <DefaultButton>Register</DefaultButton>
+        <DefaultButton type="submit">Register</DefaultButton>
       </S.Form>
     </Modal>
   );
