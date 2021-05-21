@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import * as S from "./styles";
 
 export function SignUpForm() {
-  const { createNewLoginUser } = useFirebaseConnection();
+  const { createNewLoginUser, logout } = useFirebaseConnection();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -29,6 +29,7 @@ export function SignUpForm() {
         toast.success("Login successfully registered.");
         setEmail("");
         setPassword("");
+        logout();
       })
       .catch((error) => {
         console.log(error);

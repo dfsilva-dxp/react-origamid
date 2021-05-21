@@ -6,12 +6,14 @@ import {
 } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
+import { useFirebaseConnection } from "../../hooks/useFirebaseConnection";
 
 import logo from "../../assets/balance.svg";
 
 import * as S from "./styles";
 
 export function Aside() {
+  const { logout } = useFirebaseConnection();
   return (
     <S.Aside>
       <div className="logo">
@@ -58,7 +60,7 @@ export function Aside() {
               </ReactTooltip>
             </NavLink>
           </li>
-          <li>
+          <li onClick={logout}>
             <TiPower data-tip data-for="logout" />
             <ReactTooltip id="logout" place="right" type="dark" effect="float">
               Logout

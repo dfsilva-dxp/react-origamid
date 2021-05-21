@@ -22,6 +22,7 @@ interface FirebaseConnectionProviderProps {
 
 interface FirebaseConnectionContextData {
   createNewLoginUser: (signUpUserData: SignUpUserData) => Promise<void>;
+  logout: () => Promise<void>;
 }
 
 const FirebaseConnectionContext = createContext<FirebaseConnectionContextData>(
@@ -40,8 +41,12 @@ export function FirebaseConnectionProvider({
       );
   }
 
+  async function logout() {
+    await firebase.auth().signOut();
+  }
+
   return (
-    <FirebaseConnectionContext.Provider value={{ createNewLoginUser }}>
+    <FirebaseConnectionContext.Provider value={{ createNewLoginUser, logout }}>
       {children}
     </FirebaseConnectionContext.Provider>
   );
