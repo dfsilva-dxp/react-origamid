@@ -1,12 +1,19 @@
 import { Routes, Route } from "react-router-dom";
+
 import { Home } from "../pages";
-import Dashboard from "../pages/dashboard";
+import Contanto from "../pages/contanto";
+import Produto from "../pages/produto";
+import Navbar from "../components/Navbar";
 
 export function AppRoutes() {
   return (
+    <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="contato" element={<Contanto />} />
+        <Route path="produto/:id" element={<Produto />} />
       </Routes>
+    </>
   );
 }
