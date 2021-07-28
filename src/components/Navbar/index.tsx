@@ -1,8 +1,10 @@
+import React from 'react';
+
 import { NavLink } from "react-router-dom";
 
 import * as S from "./styled";
 
-const Navbar = () => {
+const Navbar = (): JSX.Element=> {
   return <S.Header>
     <div className="container">
       <S.NavContent>

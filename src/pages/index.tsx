@@ -1,8 +1,17 @@
-import Head from "../components/Head";
+import React from "react";
 
-export function Home() {
-  return <>
-  <Head title="App | Home" description="Página Home"/>
-  <h1>Home</h1>
-  </>
+import Head from "../components/Head";
+import { Main } from "../styles/pages/home";
+
+export function Home(): JSX.Element {
+  return (
+    <>
+      <Head title="Home | app-commerce." description="Listagem de produtos do app-commerce."/>
+      <Main>
+        <div className="container">
+          <h1>Home</h1>
+        </div>
+      </Main>
+    </>
+  )
 }

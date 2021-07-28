@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Routes, Route } from "react-router-dom";
 
 import { Home } from "../pages";
@@ -6,7 +8,7 @@ import Produto from "../pages/produto";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-export function AppRoutes() {
+export function AppRoutes(): JSX.Element{
   return (
     <>
       <Navbar />
