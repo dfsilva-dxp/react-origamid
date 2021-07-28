@@ -1,6 +1,6 @@
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { FirebaseConnectionProvider } from "./hooks/useFirebaseConnection";
-import { Routes } from "./routes";
+import { AppRoutes } from "./routes/routes";
 
 import { GlobalStyle } from "./styles/global";
 import light from "./styles/themes/light";
@@ -8,10 +8,10 @@ import light from "./styles/themes/light";
 function App() {
   return (
     <ThemeProvider theme={light}>
-      <FirebaseConnectionProvider>
-        <Routes />
-      </FirebaseConnectionProvider>
-      <GlobalStyle />
+      <BrowserRouter>
+        <GlobalStyle />
+        <AppRoutes />
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
