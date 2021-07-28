@@ -2,8 +2,12 @@ import styled from "styled-components";
 
 export const List = styled.section`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+
+  @media (min-width: 475px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `
 
 export const Product = styled.div`
