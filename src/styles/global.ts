@@ -64,34 +64,32 @@ export const GlobalStyle = createGlobalStyle`
     color: inherit;
   }
 
-  .react-modal-overlay {
-    background: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .react-modal-content {
+  /* CLASSES GERAIS */
+  .container {
     width: 100%;
-    max-width: 576px;
-    background: ${({ theme }) => theme.colors.shape};
-    padding: 1rem;
-    position: relative;
-    border-radius: 0.25rem
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
   }
-  .react-modal-close {
-    position: absolute;
-    right: 1.5rem;
-    top: 1.5rem;
-    border: 0;
-    background: transparent;
-    transition: filter 0.2s;
-    &:hover {
-      filter: brightness(0.9)
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1160px
     }
   }
 
