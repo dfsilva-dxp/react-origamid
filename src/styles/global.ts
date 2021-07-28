@@ -92,6 +92,15 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .loader {
+    width: 100%;
+    height: calc(100vh - 10rem);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   /* ANIMATION */
 
   .fadeLeft {
