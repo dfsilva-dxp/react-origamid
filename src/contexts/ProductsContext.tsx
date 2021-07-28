@@ -1,4 +1,4 @@
-import React, { createContext, ReactElement } from "react";
+import React, { createContext, ReactElement, useState } from "react";
 import { api } from "../services/api";
 
 
@@ -18,7 +18,8 @@ type Product = {
 }
 
 interface ProductsContextData {
-  getAllProducts: () => Promise<Product[]>
+  getAllProducts: () => Promise<Product[]>;
+  loading: boolean;
 }
 
 const ProductsContext = createContext({} as ProductsContextData);
@@ -29,14 +30,23 @@ interface ProductsContextProviderProps {
 }
 
 function ProductsContextProvider({children}: ProductsContextProviderProps): JSX.Element {
+  const [loading, setLoading] = useState(false)
 
   async function getAllProducts(): Promise<Product[]> {
-    const response = await api.get('produto').then(({data}): Promise<Product[]> => data);
-    return response;
+
+    try { 
+      setLoading(true);
+      const response = await api.get('produto').then(({data}): Promise<Product[]> => data);
+      return response;
+    } catch (err) {
+      throw new Error(err.message)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
-    <ProductsContext.Provider value={{getAllProducts}}>
+    <ProductsContext.Provider value={{getAllProducts, loading}}>
       {children}
     </ProductsContext.Provider>
   )

@@ -17,7 +17,8 @@ type Product = {
 }
 
 interface ProductsContextData {
-  getAllProducts: () => Promise<Product[]>
+  getAllProducts: () => Promise<Product[]>;
+  loading: boolean;
 }
 
 const useProduct = (): ProductsContextData => useContext(ProductsContext);
