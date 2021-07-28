@@ -33,7 +33,6 @@ function ProductsContextProvider({children}: ProductsContextProviderProps): JSX.
   const [loading, setLoading] = useState(false)
 
   async function getAllProducts(): Promise<Product[]> {
-
     try { 
       setLoading(true);
       const response = await api.get('produto').then(({data}): Promise<Product[]> => data);
