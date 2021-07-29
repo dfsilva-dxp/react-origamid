@@ -1,22 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import {Product} from "../../types/types"
+
 import * as S from './styled';
-
-type Photos = {
-  title: string;
-  src: string;
-}
-
-type Product = {
-  id: string;
-  fotos: Photos[];
-  nome: string;
-  preco: string;
-  descricao: string;
-  vendido: string;
-  usuario_id: string;
-}
 
 interface ProductListProps {
   list: Product[];

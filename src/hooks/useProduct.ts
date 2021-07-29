@@ -1,23 +1,11 @@
 import { useContext } from "react";
+
 import { ProductsContext } from "../contexts/ProductsContext";
-
-type Photos = {
-  title: string;
-  src: string;
-}
-
-type Product = {
-  id: string;
-  fotos: Photos[];
-  nome: string;
-  preco: string;
-  descricao: string;
-  vendido: string;
-  usuario_id: string;
-}
+import {Product} from "../types/types"
 
 interface ProductsContextData {
   getAllProducts: () => Promise<Product[]>;
+  getProduct: (id: string) => Promise<Product>;
   loading: boolean;
 }
 

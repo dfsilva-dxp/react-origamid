@@ -3,23 +3,11 @@ import React , { useEffect, useState }from "react";
 import Head from "../components/Head";
 import ProductList from "../components/ProductList";
 import Spinner from "../components/Spinner";
+
 import useProduct from "../hooks/useProduct";
-import { Main } from "../styles/pages/home";
+import { Product } from "../types/types"
 
-type Photos = {
-  title: string;
-  src: string;
-}
-
-type Product = {
-  id: string;
-  fotos: Photos[];
-  nome: string;
-  preco: string;
-  descricao: string;
-  vendido: string;
-  usuario_id: string;
-}
+import { Main } from "../styles/pages/home"; 
 
 export function Home(): JSX.Element {
   const [products, setProducts] = useState<Product[]>([])

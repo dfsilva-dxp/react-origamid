@@ -17,7 +17,7 @@ export const Display = styled.section`
   @media (min-width: 475px) {
     grid-template-columns: 300px 2fr;
     align-items: start;
-  justify-items: start;
+    justify-items: start;
   }
 
 `

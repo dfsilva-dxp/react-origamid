@@ -1,4 +1,5 @@
 import React from "react";
+
 import Head from "../components/Head";
 
 import contact_us from "../assets/contact_us.png"
