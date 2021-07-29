@@ -52,7 +52,13 @@ Instale as dependências e rode o development server:
 ```bash
 yarn install
 
-yarn dev
+yarn start
+```
+
+```bash
+npm install
+
+npm start
 ```
 
 Abra [http://localhost:3000](http://localhost:3000) em seu navegador para ver o resultado.
