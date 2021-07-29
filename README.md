@@ -29,6 +29,8 @@ Para o desafio foi necessário utilize a API (https://ranekapi.origamid.dev/json
 
 - [x] Design simples, limpo e responsivo.
 - [X] React-router-dom
+- [X] Requisição de API com axios
+- [x] Animação com CSS
 
 <br>
 
@@ -38,6 +40,7 @@ As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
 
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/web/guides/quick-start)
+- [Axios](https://axios-http.com/docs/intro)
 - [VS Code](https://code.visualstudio.com/) com [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) e [EditorConfig](https://editorconfig.org/)
 
 <br>
