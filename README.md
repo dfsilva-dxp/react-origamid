@@ -49,12 +49,14 @@ As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
 
 Instale as dependências e rode o development server:
 
+## Yarn
 ```bash
 yarn install
 
 yarn start
 ```
 
+## NPM
 ```bash
 npm install
 
