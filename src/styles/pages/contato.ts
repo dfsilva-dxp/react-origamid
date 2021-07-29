@@ -9,14 +9,25 @@ export const Main = styled.main`
 
 export const Display = styled.section`
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  
+  @media (min-width: 475px) {
+    grid-template-columns: 300px 2fr;
+    align-items: start;
+  justify-items: start;
+  }
+
 `
 
 export const ImgCard = styled.div`
+  width: 100%;
   max-width: 300px;
   height: 450px;
   border-radius: 8px;
+  align-items: stretch;
 `
 
 export const ContactInfo = styled.div`
