@@ -17,7 +17,7 @@
 ## Sobre
 
 <p align="center">
-  <img src="public/images/Home.png" alt="Home page">
+  <img src="public/image/Home.png" alt="Home page">
 </p>
 
 Desafio proposto no curso Reactjs da [Origamid](https://www.origamid.com/).
