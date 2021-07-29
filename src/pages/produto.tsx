@@ -34,7 +34,7 @@ const Produto = (): JSX.Element => {
 
   return (
     <>
-      <Head title="Produto | app-commerce." description="Listagem de produtos do app-commerce."/>
+      <Head title={`${id.toUpperCase()} | app-commerce.`} description="Listagem de produtos do app-commerce."/>
 
       {loading ? (
         <div className="loader"><Spinner/></div>
